@@ -1,39 +1,36 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# VideoKit
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+VideoKit is a Dart package for manipulating video files using FFmpeg and FFprobe commands. It provides a variety of features such as muting, trimming, splitting, compressing, and retrieving video information.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Mute video
+- Trim video
+- Get video duration
+- Split video
+- Compress video
+- Get video information
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Before using VideoKit, ensure you have FFmpeg and FFprobe installed on your system and properly configured. You can download FFmpeg from [ffmpeg.org](https://ffmpeg.org/) and follow the installation instructions.
 
-## Usage
+To use VideoKit in your Dart project, add it to your `pubspec.yaml` file:
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+```yaml
+dependencies:
+  videokit: ^1.0.0
 
-```dart
-const like = 'sample';
-```
 
-## Additional information
+Then, run flutter pub get to install the package.
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Usage
+Here's a quick example of how to use VideoKit to mute a video:
+
+import 'package:videokit/videokit.dart';
+
+void main() async {
+  String inputPath = 'path/to/input/video.mp4';
+  var result = await VideoKit().muteVideo(inputPath);
+}
+
