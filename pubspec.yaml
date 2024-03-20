@@ -1,5 +1,5 @@
 name: video_kit
-description: "A new Flutter package project."
+description: "VideoKit is a Dart package for manipulating video files using FFmpeg and FFprobe commands. It provides a variety of features such as muting, trimming, splitting, compressing, and retrieving video information."
 version: 0.0.1
 homepage: https://github.com/walikhan226/video_kit
 
